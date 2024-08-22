@@ -116,10 +116,11 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
+# Har qanday boshqa migratsiya fayllarini e'tiborga olma
+**/migrations/*.py
 
-*/migrations/
+# `__init__.py` faylini kuzatishda qoldirish
+!**/migrations/__init__.py
 
 # mypy
 .mypy_cache/
