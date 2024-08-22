@@ -51,6 +51,11 @@ coverage.xml
 .pytest_cache/
 cover/
 
+# Django migration files
+**/migrations/*
+!**/migrations/__init__.py
+
+
 
 staticfiles/
 static_cdn/
