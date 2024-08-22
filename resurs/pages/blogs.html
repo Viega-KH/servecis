@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<section class="pb-10 pt-20 dark:bg-dark xl:pb-20 xl:pt-[120px]">
+    <div class="container mx-auto">
+        <div class="flex items-start justify-between text-white max-xl:flex-col">
+            <div class="container-video max-xl:mb-5 content-center">
+                <span class="mb-2 block text-xl font-semibold text-primary">
+                    {% trans 'Our' %}
+                </span>
+                <h2 class="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                    {% trans 'BLOG' %}
+                </h2>
+            </div>
+            <div class="container-video w-full md:w-1/3 max-xl:mb-5 content-center">
+                <form method="get" action="{% url 'blogs' %}"
+                    class="mt-10 mx-auto w-full py-2 px-6 rounded-full bg-gray-50 border flex focus-within:border-gray-300">
+                    <input type="text" placeholder="{% trans 'Search' %}"
+                        class="bg-transparent w-full focus:outline-none pr-4 font-semibold text-dark border-0 focus:ring-0 px-0 py-0"
+                        name="topic"><button
+                        class="flex flex-row items-center justify-center min-w-[130px] px-4 rounded-full font-medium tracking-wide border disabled:cursor-not-allowed disabled:opacity-50 transition ease-in-out duration-150 text-base bg-black text-white font-medium tracking-wide border-transparent py-1.5 h-[38px] -mr-3">
+                        {% trans 'Search' %}
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="flex items-start justify-between text-white max-xl:flex-col pt-4">
+            <form method="get" action="{% url 'blogs' %}"
+                class="overflow-y-auto overflow-y-hidden whitespace-nowrap py-4 content-center flex gap-3 max-md:w-full md:gap-4">
+                {% for list in categore %}
+                <button value="{{ list.id }}" name="categore_btn"
+                    class="font-roboto text-dark hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary cursor-pointer whitespace-nowrap rounded-xl border dark:border-solid dark:border-white/20 px-4 py-2 dark:text-white/60 duration-300 sm:rounded-[12px] md:px-6 md:py-3.5">
+                    {{ list.name }}
+                </button>
+                {% endfor %}
+            </form>
+        </div>
+
+        <div class="-mx-4 flex flex-wrap px-4 space-y-6 sm:space-y-12">
+
+            <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+
+                {% for list in blog %}
+                <div data-aos="fade-right" data-aos-once="true" data-aos-offset="50" data-aos-duration="400"
+                    data-aos-once="true"
+                    class="bg-white w-full rounded-xl border border-stroke dark:border-dark-3 dark:bg-dark-2 shadow-md flex flex-col overflow-hidden hover:shadow-2xl">
+                    <div class="p-6 h-64">
+
+                        <div class="pb-3 mb-4 border-b dark:border-dark-3 text-xs font-medium flex justify-between">
+                            <span class="flex items-center gap-1 text-dark-2 dark:text-dark-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                {{ list.publish|date:"d F Y" }}
+                            </span>
+                            <span class="flex items-center gap-1 text-dark-2 dark:text-dark-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3 class="mb-4 font-semibold  text-2xl">
+                            <a href="{% url 'blogone' list.id %}" class="transition-all text-dark dark:text-white hover:text-blue-600">
+                                {{ list.title|slice:":70" }}
+                            </a></h3>
+                        <p class="text-dark-2 dark:text-dark-6 text-sm mb-0">
+                            {{ list.body|striptags|safe|slice:":100" }}...
+                        </p>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="{% url 'blogone' list.id %}">
+                            <img src="{{ list.image.url }}" alt="image" class="w-full h-48 object-cover">
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====== Call To Action Section Start -->
+{% include 'include/call.html' %}
+<!-- ====== Call To Action Section End -->
+{% endblock content %}

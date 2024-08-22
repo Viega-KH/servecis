@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: "Titillium Web", sans-serif;
+}
+
+@keyframes light-pass {
+    0% {
+        background-position: -200%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+.glass-text {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.2));
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: light-pass 3s infinite;
+}
+
+#safe_content img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    border-radius: 20px;
+}

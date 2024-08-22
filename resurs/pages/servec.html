@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<!-- ====== Team Section Start -->
+<section class="pb-10 pt-20 dark:bg-dark xl:pb-20 xl:pt-[120px]">
+    <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+                    <span class="mb-2 block text-xl font-semibold text-primary">
+                        {% trans 'Our' %}
+                    </span>
+                    <h2
+                        class="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                        {% trans 'SERVICES' %}
+                    </h2>
+                    <p class="dark:text-dark-6 text-base text-body-color">
+                        {% blocktrans %}We create a custom project tailored to your needs and goals. It gives a modern and
+                        functional look with an individual approach to each project.{% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {% for list in services %}
+            <div class="w-full" data-aos="fade-right" data-aos-once="true" data-aos-offset="50" data-aos-duration="400"
+                data-aos-once="true">
+                <a>
+                    <div
+                        class="group h-36 relative overflow-hidden rounded-xl border border-stroke bg-white p-8 dark:border-dark-3 dark:bg-dark-2">
+                        <div>
+                            <h4 class="text-2xl font-medium text-dark dark:text-white">
+                                {{ list.name }}
+                            </h4>
+                            <p class="text-2xs text-body-color dark:text-dark-6">
+                                {{ list.description }}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- ====== Team Section End -->
+<!-- ====== Call To Action Section Start -->
+{% include 'include/call.html' %}
+<!-- ====== Call To Action Section End -->
+{% endblock content %}

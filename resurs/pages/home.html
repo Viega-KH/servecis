@@ -1,0 +1,345 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<!-- ====== Hero Section Start -->
+<div class="relative z-10 overflow-hidden bg-white pb-[110px] pt-[120px] dark:bg-dark md:pt-[150px] xl:pt-[100px]">
+    <div class="absolute left-0 top-0 z-[-1] h-full w-full rounded-br-[200px] bg-[#F8F8F8] dark:bg-dark-2 xl:w-1/2">
+    </div>
+
+    <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap items-center">
+            <div class="w-full px-4 xl:w-5/12">
+                <div class="hero-content px-10" data-aos="fade-up" data-aos-once="true" data-aos-offset="50"
+                    data-aos-duration="400">
+                    <span class="mb-4 block text-xl font-medium text-primary">
+                        {% trans 'Trust us!' %}
+                    </span>
+                    <h1
+                        class="mb-4 text-4xl font-bold !leading-[1.208] text-dark dark:text-white sm:text-[42px] xl:text-[40px] xl:text-5xl">
+                        {% trans 'We will take your project to a new level' %}
+                    </h1>
+                    <p class="mb-16 max-w-[440px] text-base text-body-color dark:text-dark-6">
+                        {% trans 'Get advice for your business or startup with us right now!' %}
+                    </p>
+                    <ul class="flex flex-wrap items-center">
+                        <li>
+                            <a href="Tel: {{ contacts.call }}"
+                                class="inline-flex h-[50px] items-center justify-center rounded-xl bg-dark py-[10px] pl-[10px] pr-5 text-center text-base font-medium text-dark shadow-sm transition duration-200 hover:text-primary hover:shadow-2xl dark:bg-dark dark:text-white dark:hover:text-primary">
+                                <span class="mr-4 text-dark group-hover:text-primary dark:text-dark-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                        aria-label="icon" class="inline-flex">
+                                        <path
+                                            d="M12.9695 13.6577C12.7326 13.8944 12.4957 14.2495 12.3181 14.5455C11.2522 13.7168 10.3047 12.7106 9.47566 11.7044C9.83097 11.5269 10.1271 11.2901 10.3639 11.0534C11.5483 9.86958 11.1337 8.33068 9.9494 7.14691C8.76506 5.96314 7.28463 5.48963 6.04107 6.73259C4.7975 7.97555 4.67907 10.1063 5.62655 11.4677C7.34384 14.072 9.9494 16.6763 12.555 18.3927C13.9762 19.3398 16.108 19.1622 17.2923 17.9784C18.4767 16.7946 18.0622 15.2557 16.8778 14.072C15.6935 12.8882 14.1538 12.4147 12.9695 13.6577Z"
+                                            stroke="white" stroke-width="1.6" stroke-miterlimit="10"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M19 11C19 7.66667 16.3333 5 13 5" stroke="white" stroke-width="1.6"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <path d="M16 11C16 9.34043 14.6531 8 13 8" stroke="white" stroke-width="1.6"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <p
+                                    class="linear-wipe glass-text xl:!leading-130 flex select-none items-center justify-center gap-x-[10px] text-base font-bold leading-[16px] transition duration-500 ease-in-out group-hover:bg-white md:!text-base xl:!text-base">
+                                    {% trans 'Call' %}</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ works }}"
+                                class="inline-flex items-center px-6 py-3 text-base font-medium text-dark rounded-xl hover:text-body-color dark:text-white group">
+                                {% trans 'Our work' %}
+                                <span class="ml-2 transition-transform duration-300 group-hover:rotate-[30deg]">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="fill-current">
+                                        <path
+                                            d="M18 9.5L11.5312 2.9375C11.25 2.65625 10.8125 2.65625 10.5312 2.9375C10.25 3.21875 10.25 3.65625 10.5312 3.9375L15.7812 9.28125H2.5C2.125 9.28125 1.8125 9.59375 1.8125 9.96875C1.8125 10.3437 2.125 10.6875 2.5 10.6875H15.8437L10.5312 16.0938C10.25 16.375 10.25 16.8125 10.5312 17.0938C10.6562 17.2188 10.8437 17.2813 11.0312 17.2813C11.2187 17.2813 11.4062 17.2188 11.5312 17.0625L18 10.5C18.2812 10.2187 18.2812 9.78125 18 9.5Z"
+                                            fill=""></path>
+                                    </svg>
+                                </span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden px-4 xl:block xl:w-1/12"></div>
+            <div class="hidden xl:block w-full pt-24 xl:w-6/12">
+                <div class="mx-auto text-center" data-aos="fade-up" data-aos-once="true" data-aos-offset="50"
+                    data-aos-duration="400">
+                    <div class="relative z-10 mt-16 inline-block xl:mt-0">
+                        <img src="http://t.commonsupport.com/gosearch/images/main-slider/content-image-1.png" alt="hero"
+                            class="mx-auto max-w-full" />
+                        <!-- <div class="absolute -left-10 top-10 z-[-1]">
+                            <img src="https://demo.tailgrids.com/templates/app/build/src/assets/images/hero/hero6-shape-1.svg"
+                                alt="shape" />
+                        </div> -->
+                        <div class="absolute -right-1 top-10 z-[-1]">
+                            <svg width="40" height="38" viewBox="0 0 40 38" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.03852 10.0507C2.56762 6.4938 5.49873 2.67846 9.31451 3.18306L32.4926 6.24813C36.3084 6.75273 38.147 11.1988 35.8021 14.2511L21.5587 32.7914C19.2138 35.8436 14.444 35.2129 12.9731 31.656L4.03852 10.0507Z"
+                                    stroke="#13C296" stroke-width="6" />
+                            </svg>
+                        </div>
+                        <div class="absolute -right-16 bottom-10 z-[-1]">
+                            <svg width="53" height="53" viewBox="0 0 53 53" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.923995 43.5761C3.73599 46.3881 7.07432 48.6187 10.7484 50.1406C14.4224 51.6624 18.3603 52.4457 22.337 52.4457C26.3138 52.4457 30.2516 51.6624 33.9257 50.1406C37.5997 48.6187 40.9381 46.3881 43.7501 43.5761C46.5621 40.7641 48.7927 37.4258 50.3145 33.7517C51.8363 30.0777 52.6196 26.1399 52.6196 22.1631C52.6196 18.1863 51.8363 14.2485 50.3145 10.5744C48.7927 6.90038 46.5621 3.56205 43.7501 0.750054L35.1655 9.3346C36.8502 11.0193 38.1865 13.0192 39.0982 15.2204C40.01 17.4215 40.4792 19.7806 40.4792 22.1631C40.4792 24.5456 40.01 26.9047 39.0982 29.1058C38.1865 31.3069 36.8502 33.3069 35.1655 34.9916C33.4808 36.6762 31.4809 38.0126 29.2797 38.9243C27.0786 39.836 24.7195 40.3053 22.337 40.3053C19.9546 40.3053 17.5954 39.836 15.3943 38.9243C13.1932 38.0126 11.1932 36.6762 9.50854 34.9916L0.923995 43.5761Z"
+                                    fill="#F9BA45" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ====== Hero Section End -->
+
+<!-- ====== Brands Section Start -->
+<!-- ====== Brands Section End -->
+
+<!-- ====== Services Section Start -->
+<section class="pt-20 dark:bg-dark xl:pt-[120px]">
+    <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+            <div class="w-full pt-20 px-4">
+                <div class="mx-auto mb-12 max-w-[510px] text-center xl:mb-20">
+                    <span class="mb-2 block text-xl font-semibold text-primary">
+                        {% trans 'Core Features' %}
+                    </span>
+                    <h2
+                        class="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                        {% trans 'Why us?' %}
+                    </h2>
+                    <p class="dark:text-dark-6 text-base text-body-color">
+                        {% trans 'Our team will create and deliver your project with high quality' %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="-mx-4 flex flex-wrap">
+            <div class="w-full px-4 md:w-1/2 xl:w-1/4">
+                <div class="relative mx-auto max-w-[370px] text-center">
+                    <div
+                        class="absolute -right-4 top-12 hidden h-1 w-16 border-t-2 border-dashed border-primary xl:block xl:w-[75px]">
+                    </div>
+                    <div data-aos="fade-right" data-aos-once="true" data-aos-offset="50" data-aos-duration="400"
+                        class="relative mx-auto mb-8 flex h-[100px] w-[100px] items-center justify-center rounded-xl bg-primary text-white">
+                        <svg class="fill-current" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path
+                                d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z" />
+                        </svg>
+                    </div>
+                    <h3 class="mb-5 text-xl font-semibold text-dark dark:text-white">
+                        {% trans 'Expertise & Experience' %}
+                    </h3>
+                    <p class="dark:text-dark-6 text-base text-body-color">
+                        {% blocktrans %}Our team has many years of experience and uses the latest technologies in creating websites.
+                        We provide innovative and effective solutions to achieve our clients' goals.{% endblocktrans %}  
+                    </p>
+                </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 xl:w-1/4">
+                <div class="relative mx-auto max-w-[370px] text-center">
+                    <div
+                        class="absolute -left-4 top-12 hidden h-1 w-16 border-t-2 border-dashed border-primary xl:block xl:w-[75px]">
+                    </div>
+                    <div
+                        class="absolute right-[-14px] top-12 hidden h-1 w-16 border-t-2 border-dashed border-primary xl:block xl:w-[75px]">
+                    </div>
+                    <div
+                        class="mx-auto mb-8 flex h-[100px] w-[100px] items-center justify-center rounded-xl bg-primary text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" width="44" height="44" fill="none"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M2 20h20v2H2zM4 3v14a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1zm2 1h3v12H6zM13 17a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-5a1 1 0 0 0-1 1zm2-9h3v8h-3z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="mb-5 text-xl font-semibold text-dark dark:text-white">
+                        {% trans 'Custom Solutions' %}
+                    </h3>
+                    <p class="dark:text-dark-6 text-base text-body-color">  
+                        
+                        {% blocktrans %}Every project is unique, so we create customized solutions specifically for your business.
+                        We fully understand your needs and offer the best solutions.
+                        {% endblocktrans %}
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 xl:w-1/4">
+                <div class="relative mx-auto max-w-[370px] text-center">
+                    <div
+                        class="absolute -left-4 top-12 hidden h-1 w-16 border-t-2 border-dashed border-primary xl:block xl:w-[75px]">
+                    </div>
+                    <div
+                        class="absolute right-[-14px] top-12 hidden h-1 w-16 border-t-2 border-dashed border-primary xl:block xl:w-[75px]">
+                    </div>
+                    <div
+                        class="mx-auto mb-8 flex h-[100px] w-[100px] items-center justify-center rounded-xl bg-primary text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" width="44" height="44" fill="none"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M20.92 2.38A15.72 15.72 0 0 0 17.5 2a8.26 8.26 0 0 0-6 2.06Q9.89 5.67 8.31 7.27c-1.21-.13-4.08-.2-6 1.74a1 1 0 0 0 0 1.41l11.3 11.32a1 1 0 0 0 1.41 0c1.95-2 1.89-4.82 1.77-6l3.21-3.2c3.19-3.19 1.74-9.18 1.68-9.43a1 1 0 0 0-.76-.73zm-2.36 8.75L15 14.67a1 1 0 0 0-.27.9 6.81 6.81 0 0 1-.54 3.94L4.52 9.82a6.67 6.67 0 0 1 4-.5A1 1 0 0 0 9.39 9s1.4-1.45 3.51-3.56A6.61 6.61 0 0 1 17.5 4a14.51 14.51 0 0 1 2.33.2c.24 1.43.62 5.04-1.27 6.93z">
+                            </path>
+                            <circle cx="15.73" cy="8.3" r="2"></circle>
+                            <path d="M5 16c-2 1-2 5-2 5a7.81 7.81 0 0 0 5-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mb-5 text-xl font-semibold text-dark dark:text-white">
+                        {% trans 'Client-Centric Approach' %}
+                    </h3>
+                    <p class="dark:text-dark-6 text-base text-body-color">
+                       {% blocktrans %}Our customers have a solid business for us. We work closely on everything and always listen
+                       to our demands. We continuously develop our solutions to ensure their business growth.{% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 xl:w-1/4">
+                <div class="relative mx-auto max-w-[370px] text-center">
+                    <div
+                        class="absolute left-[-14px] top-12 hidden h-1 w-16 border-t-2 border-dashed border-primary xl:block xl:w-[75px]">
+                    </div>
+                    <div data-aos="fade-left" data-aos-once="true" data-aos-offset="50" data-aos-duration="400"
+                        class="mx-auto mb-8 flex h-[100px] w-[100px] items-center justify-center rounded-xl bg-primary text-white">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="fill-current">
+                            <path
+                                d="M36.4375 7.35627C32.1062 2.95627 26.0562 0.82502 19.9375 1.51252C10.3813 2.47502 2.81875 10.1063 1.7875 19.5938C1.375 23.9938 2.26875 28.2563 4.46875 31.9688L1.71875 39.1188C1.30625 40.0813 1.58125 41.25 2.40625 41.9375C2.8875 42.35 3.50625 42.625 4.125 42.625C4.5375 42.625 4.88125 42.5563 5.29375 42.35L11.55 39.1875C15.3312 41.4563 19.5937 42.4188 24.0625 42.0063C33.6875 41.1125 41.3875 33.4813 42.35 23.7875C42.9687 17.6688 40.8375 11.6875 36.4375 7.35627ZM39.2562 23.5125C38.4312 31.6938 31.9 38.1563 23.7187 38.9125C19.6625 39.325 15.8125 38.2938 12.4438 36.0938C12.1688 35.8875 11.8938 35.8188 11.6187 35.8188C11.4125 35.8188 11.1375 35.8875 10.9312 35.9563L5.0875 38.8438L7.63125 32.2438C7.8375 31.7625 7.76875 31.2813 7.49375 30.8688C5.3625 27.5688 4.46875 23.7188 4.88125 19.7313C5.70625 11.825 12.1688 5.43127 20.2125 4.60627C25.4375 4.05627 30.5937 5.84377 34.2375 9.55627C37.95 13.2 39.8062 18.2875 39.2562 23.5125Z"
+                                fill="white"></path>
+                            <path
+                                d="M16.2937 16.4313H26.4687C27.2937 16.4313 28.05 15.7438 28.05 14.8501C28.05 13.9563 27.3625 13.2688 26.4687 13.2688H16.2937C15.4687 13.2688 14.7125 13.9563 14.7125 14.8501C14.7125 15.7438 15.4687 16.4313 16.2937 16.4313Z"
+                                fill="white"></path>
+                            <path
+                                d="M30.525 20.4187H16.2937C15.4687 20.4187 14.7125 21.1062 14.7125 22C14.7125 22.8937 15.4 23.5125 16.2937 23.5125H30.525C31.35 23.5125 32.1062 22.825 32.1062 22C32.1062 21.175 31.35 20.4187 30.525 20.4187Z"
+                                fill="white"></path>
+                            <path
+                                d="M23.4437 27.5688H16.2937C15.4687 27.5688 14.7125 28.2563 14.7125 29.1501C14.7125 30.0438 15.4 30.7313 16.2937 30.7313H23.375C24.2 30.7313 24.9562 30.0438 24.9562 29.1501C24.9562 28.2563 24.2687 27.5688 23.4437 27.5688Z"
+                                fill="white"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mb-5 text-xl font-semibold text-dark dark:text-white">
+                        {% trans 'Continuous Support' %}
+                    </h3>
+                    <p class="dark:text-dark-6 text-base text-body-color">
+                       {% blocktrans %}Once you start working with us, we won't leave you alone. We will continue to provide
+                       support and maintenance even after the project is over, so your site will always be up and
+                       running.{% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====== Services Section End -->
+
+<!-- ====== Pricing Section Start -->
+<section class="bg-white pt-20 dark:bg-dark xl:pt-[120px]">
+    <div class="container mx-auto">
+        <div class="max-md:hidden flex items-start justify-between text-white max-xl:flex-col md:mb-12">
+            <div class="container-video max-xl:mb-5 content-center">
+                <span class="mb-2 block text-xl font-semibold text-primary">
+                    {% trans 'Our' %}
+                </span>
+                <h2 class="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                    {% trans 'PORTFOLIO' %}
+                </h2>
+            </div>
+            <div class="scroll-mini mt-5 content-center flex overflow-y-auto max-md:w-full">
+                <a href="{{ works }}"
+                    class="font-roboto text-dark hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary cursor-pointer whitespace-nowrap rounded-xl border dark:border-solid dark:border-white/20 px-4 py-2 dark:text-white/60 duration-300 sm:rounded-[12px] md:px-6 md:py-3.5">
+                    {% trans 'More' %}</a>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <div class="">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+
+
+                        {% for list in work %}
+                        <div data-aos="fade-right" data-aos-once="true" data-aos-offset="50" data-aos-duration="400"
+                            class="{% if list.size == 'big' %}md:col-span-2 md:row-span-2{% endif %} relative overflow-hidden rounded-xl shadow-xl group">
+                            <a href="{% url 'workone' list.id %}">
+                                <img src="{{ list.image.url }}" alt="Nature" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                                        <p class="text-white text-sm">{{ list.workcategores }}</p>
+                                        <h4 class="text-white text-xl font-bold ">{{ list.title }}</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====== Pricing Section End -->
+
+<!-- ====== Team Section Start -->
+<section class="pb-10 pt-20 dark:bg-dark xl:pb-20 xl:pt-[120px]">
+    <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+                    <span class="mb-2 block text-xl font-semibold text-primary">
+                        {% trans 'Our' %}
+                    </span>
+                    <h2
+                        class="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                        {% trans 'SERVICES' %}
+                    </h2>
+                    <p class="dark:text-dark-6 text-base text-body-color">
+                        {% blocktrans %}We create a custom project tailored to your needs and goals. It gives a modern and
+                        functional look with an individual approach to each project.{% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+
+            {% for list in services %}
+            <div class="w-full" data-aos="fade-right" data-aos-once="true" data-aos-offset="50" data-aos-duration="400"
+                data-aos-once="true">
+                <a>
+                    <div
+                        class="group h-36 relative overflow-hidden rounded-xl border border-stroke bg-white p-8 dark:border-dark-3 dark:bg-dark-2">
+                        <div>
+                            <h4 class="text-2xl font-medium text-dark dark:text-white">
+                                {{ list.name }}
+                            </h4>
+                            <p class="text-2xs text-body-color dark:text-dark-6">
+                                {{ list.description }}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</section>
+<!-- ====== Team Section End -->
+<!-- ====== Call To Action Section Start -->
+{% include 'include/call.html' %}
+<!-- ====== Call To Action Section End -->
+
+{% endblock content %}

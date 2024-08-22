@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-21 19:47+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\blogs\apps.py:7 .\blogs\apps.py:8
+msgid "Information"
+msgstr "Информация"
+
+#: .\blogs\models.py:7 .\servecs\models.py:5
+msgid "Name"
+msgstr "Имя"
+
+#: .\blogs\models.py:10 .\blogs\models.py:11 .\blogs\models.py:26
+#: .\works\models.py:10 .\works\models.py:22
+msgid "Category"
+msgstr "Категория"
+
+#: .\blogs\models.py:19
+msgid "Draft"
+msgstr "Черновик"
+
+#: .\blogs\models.py:20
+msgid "Published"
+msgstr "Опубликовано"
+
+#: .\blogs\models.py:23 .\works\models.py:5 .\works\models.py:23
+msgid "Title"
+msgstr "Название"
+
+#: .\blogs\models.py:24
+msgid "Body"
+msgstr "Содержание"
+
+#: .\blogs\models.py:25
+msgid "Status"
+msgstr "Статус"
+
+#: .\blogs\models.py:27 .\works\models.py:26
+msgid "Image"
+msgstr "Изображение"
+
+#: .\blogs\models.py:28
+msgid "Publish Date"
+msgstr "Дата публикации"
+
+#: .\blogs\models.py:29 .\servecs\models.py:8
+msgid "Created"
+msgstr "Создано"
+
+#: .\blogs\models.py:30 .\servecs\models.py:9
+msgid "Updated"
+msgstr "Обновлено"
+
+#: .\blogs\models.py:33 .\blogs\models.py:34 .\resurs\base.html:92
+msgid "Blog"
+msgstr "Блог"
+
+#: .\conf.txt:4
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\config\settings.py:128
+msgid "English"
+msgstr "Английский"
+
+#: .\config\settings.py:129
+msgid "Russian"
+msgstr "Русский"
+
+#: .\config\settings.py:130
+msgid "Uzbek"
+msgstr "Узбекский"
+
+#: .\contact\apps.py:7 .\contact\apps.py:8
+msgid "contact"
+msgstr "Контакт"
+
+#: .\contact\models.py:5
+msgid "Location"
+msgstr "Местоположение"
+
+#: .\contact\models.py:6
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\contact\models.py:7
+msgid "Telegram"
+msgstr "Телеграм"
+
+#: .\contact\models.py:8
+msgid "Twitter"
+msgstr "Твиттер"
+
+#: .\contact\models.py:9
+msgid "Instagram"
+msgstr "Инстаграм"
+
+#: .\contact\models.py:10
+msgid "Facebook"
+msgstr "Фейсбук"
+
+#: .\contact\models.py:11 .\resurs\pages\home.html:47
+msgid "Call"
+msgstr "Звонок"
+
+#: .\contact\models.py:14 .\contact\models.py:15 .\works\models.py:27
+msgid "Link"
+msgstr "Ссылка"
+
+#: .\contact\models.py:18
+msgid "Company"
+msgstr "Компания"
+
+#: .\contact\models.py:19 .\resurs\include\call.html:57
+msgid "Full Name"
+msgstr "Полное имя"
+
+#: .\contact\models.py:20 .\resurs\include\call.html:69
+msgid "Type of Project"
+msgstr "Тип проекта"
+
+#: .\contact\models.py:21
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\contact\models.py:22
+msgid "Date"
+msgstr "Дата"
+
+#: .\contact\models.py:23 .\contact\models.py:26 .\contact\models.py:27
+msgid "Message"
+msgstr "Сообщение"
+
+#: .\resurs\base.html:71
+msgid "Home"
+msgstr "Главная"
+
+#: .\resurs\base.html:78 .\works\apps.py:7
+msgid "Portfolio"
+msgstr "Портфолио"
+
+#: .\resurs\base.html:85 .\servecs\models.py:13
+msgid "Services"
+msgstr "Услуги"
+
+#: .\resurs\base.html:156
+msgid "Need Help?"
+msgstr "Нужна помощь?"
+
+#: .\resurs\include\call.html:10
+msgid "We will contact you"
+msgstr "Мы свяжемся с вами"
+
+#: .\resurs\include\call.html:13
+msgid ""
+"After you fill in this basic information, our responsible staff will contact "
+"you."
+msgstr ""
+"После того как вы заполните эту основную информацию, наш ответственный сотрудник свяжется "
+"с вами."
+
+#: .\resurs\include\call.html:51
+msgid "Enter your company name"
+msgstr "Введите название вашей компании"
+
+#: .\resurs\include\call.html:63
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+#: .\resurs\include\call.html:75
+msgid "Project Description"
+msgstr "Описание проекта"
+
+#: .\resurs\include\call.html:83
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+#: .\resurs\include\work.html:26
+msgid "Clint"
+msgstr "Клиент"
+
+#: .\resurs\include\work.html:32 .\works\models.py:25
+msgid "Technology"
+msgstr "Технология"
+
+#: .\resurs\include\work.html:52
+msgid "View site"
+msgstr "Просмотреть сайт"
+
+#: .\resurs\pages\blogs.html:11 .\resurs\pages\home.html:249
+#: .\resurs\pages\home.html:300 .\resurs\pages\servec.html:13
+#: .\resurs\pages\works.html:13
+msgid "Our"
+msgstr "Наши"
+
+#: .\resurs\pages\blogs.html:14
+msgid "BLOG"
+msgstr "БЛОГ"
+
+#: .\resurs\pages\blogs.html:20 .\resurs\pages\blogs.html:24
+msgid "Search"
+msgstr "Поиск"
+
+#: .\resurs\pages\home.html:17
+msgid "Trust us!"
+msgstr "Доверьтесь нам!"
+
+#: .\resurs\pages\home.html:21
+msgid "We will take your project to a new level"
+msgstr "Мы выведем ваш проект на новый уровень"
+
+#: .\resurs\pages\home.html:24
+msgid "Get advice for your business or startup with us right now!"
+msgstr "Получите консультацию для вашего бизнеса или стартапа прямо сейчас!"
+
+#: .\resurs\pages\home.html:53
+msgid "Our work"
+msgstr "Наша работа"
+
+#: .\resurs\pages\home.html:113
+msgid "Core Features"
+msgstr "Основные особенности"
+
+#: .\resurs\pages\home.html:117
+msgid "Why us?"
+msgstr "Почему мы?"
+
+#: .\resurs\pages\home.html:120
+msgid "Our team will create and deliver your project with high quality"
+msgstr "Наша команда создаст и реализует ваш проект с высоким качеством"
+
+#: .\resurs\pages\home.html:140
+msgid "Expertise & Experience"
+msgstr "Экспертиза и опыт"
+
+#: .\resurs\pages\home.html:143
+msgid ""
+"Our team has many years of experience and uses the latest technologies in "
+"creating websites.\n"
+"                        We provide innovative and effective solutions to "
+"achieve our clients' goals."
+msgstr ""
+"Наша команда имеет многолетний опыт и использует новейшие технологии в "
+"создании сайтов.\n"
+"                        Мы предоставляем инновационные и эффективные решения для "
+"достижения целей наших клиентов."
+
+#: .\resurs\pages\home.html:166
+msgid "Custom Solutions"
+msgstr "Индивидуальные решения"
+
+#: .\resurs\pages\home.html:170
+msgid ""
+"Every project is unique, so we create customized solutions specifically for "
+"your business.\n"
+"                        We fully understand your needs and offer the best "
+"solutions.\n"
+"                        "
+msgstr ""
+"Каждый проект уникален, поэтому мы создаем индивидуальные решения специально для "
+"вашего бизнеса.\n"
+"                        Мы полностью понимаем ваши потребности и предлагаем лучшие "
+"решения.\n"
+"                        "
+
+#: .\resurs\pages\home.html:197
+msgid "Client-Centric Approach"
+msgstr "Ориентированный на клиента подход"
+
+#: .\resurs\pages\home.html:200
+msgid ""
+"Our customers have a solid business for us. We work closely on everything "
+"and always listen\n"
+"                       to our demands. We continuously develop our solutions "
+"to ensure their business growth."
+msgstr ""
+"Наши клиенты имеют серьезный бизнес для нас. Мы тесно работаем над всем "
+"и всегда прислушиваемся\n"
+"                       к нашим требованиям. Мы постоянно развиваем наши решения, "
+"чтобы обеспечить рост их бизнеса."
+
+#: .\resurs\pages\home.html:229
+msgid "Continuous Support"
+msgstr "Непрерывная поддержка"
+
+#: .\resurs\pages\home.html:232
+msgid ""
+"Once you start working with us, we won't leave you alone. We will continue "
+"to provide\n"
+"                       support and maintenance even after the project is "
+"over, so your site will always be up and\n"
+"                       running."
+msgstr ""
+"Как только вы начнете работать с нами, мы не оставим вас одних. Мы будем продолжать "
+"предоставлять\n"
+"                       поддержку и обслуживание даже после завершения проекта, чтобы ваш сайт всегда "
+"работал и был\n"
+"                       доступен."
+
+#: .\resurs\pages\home.html:252 .\resurs\pages\works.html:16
+msgid "PORTFOLIO"
+msgstr "ПОРТФОЛИО"
+
+#: .\resurs\pages\home.html:258
+msgid "More"
+msgstr "Больше"
+
+#: .\resurs\pages\home.html:304 .\resurs\pages\servec.html:17
+msgid "SERVICES"
+msgstr "УСЛУГИ"
+
+#: .\resurs\pages\home.html:307 .\resurs\pages\servec.html:20
+msgid ""
+"We create a custom project tailored to your needs and goals. It gives a "
+"modern and\n"
+"                        functional look with an individual approach to each "
+"project."
+msgstr ""
+"Мы создаем индивидуальный проект, адаптированный к вашим потребностям и целям. Он придает "
+"современный и\n"
+"                        функциональный вид с индивидуальным подходом к каждому проекту."
+
+#: .\servecs\apps.py:7 .\servecs\apps.py:8 .\servecs\models.py:12
+msgid "Service"
+msgstr "Сервис"
+
+#: .\servecs\models.py:6
+msgid "Description"
+msgstr "Описание"
+
+#: .\servecs\models.py:7
+msgid "Active"
+msgstr "Активный"
+
+#: .\works\apps.py:8
+msgid "Portfolios"
+msgstr "Портфолио"
+
+#: .\works\models.py:6 .\works\models.py:28
+msgid "Created At"
+msgstr "Создано"
+
+#: .\works\models.py:7 .\works\models.py:29
+msgid "Updated At"
+msgstr "Обновлено"
+
+#: .\works\models.py:11
+msgid "Categories"
+msgstr "Категории"
+
+#: .\works\models.py:18
+msgid "Big Size"
+msgstr "Большой размер"
+
+#: .\works\models.py:19
+msgid "Small Size"
+msgstr "Маленький размер"
+
+#: .\works\models.py:21
+msgid "Size"
+msgstr "Размер"
+
+#: .\works\models.py:24
+msgid "Client"
+msgstr "Клиент"
+
+#: .\works\models.py:32
+msgid "Work"
+msgstr "Работа"
+
+#: .\works\models.py:33
+msgid "Works"
+msgstr "Работы"
+
