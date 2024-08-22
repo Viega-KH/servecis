@@ -51,9 +51,12 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# Django migration files
+# Migrations katalogidagi barcha fayllarni e'tiborga olma
 **/migrations/*
+
+# Ammo __init__.py va migrate fayllarini e'tiborga ol
 !**/migrations/__init__.py
+!**/migrations/*.py
 
 
 
